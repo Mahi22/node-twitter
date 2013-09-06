@@ -8,16 +8,16 @@ block content
         h1 Node Twitter
         p It is a twitter clone written in nodejs.
   .row
-    .col-lg-4
-    .col-lg-8
+    .col-md-4
+    .col-md-8
       each tweet in tweets
         .well
           .tweet
             .row
-              .col-lg-6.pull-left
+              .col-md-6.pull-left
                 h5
                   a(href="/users/"+tweet.user._id)=tweet.user.name
-              .col-lg-5.date
+              .col-md-5.date
                 .pull-right
                   = formatDate(tweet.createdAt, "%b %d, %Y at %I:%M %p")
             p=tweet.body

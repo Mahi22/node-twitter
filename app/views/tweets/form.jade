@@ -2,7 +2,7 @@ extends ../layouts/default
 
 
 block content
-  .row
+  .row-fluid
   a.btn.btn-primary.btn-lg(data-toggle='modal', href='#myModal') Create New Tweet
   #myModal.modal.fade
     .modal-dialog
@@ -11,7 +11,7 @@ block content
           button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
           h4.modal-title Create New Tweet
         .modal-body
-          .row
+          .row-fluid
               - var action = '/tweets'
               if (!tweet.isNew)
                 - action += '/'+tweet.id
